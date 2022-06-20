@@ -1,4 +1,7 @@
-﻿namespace LMStest
+﻿// <copyright file="TestsHelper.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+namespace LMStest
 {
     using System;
     using System.Collections.Generic;
@@ -11,6 +14,9 @@
     /// </summary>
     public class TestsHelper
     {
+        /// <summary>
+        /// id for test.
+        /// </summary>
         private string id = string.Empty;
     }
 }

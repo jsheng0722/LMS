@@ -17,15 +17,21 @@ namespace LMS
         /// <summary>
         /// user id.
         /// </summary>
-#pragma warning disable SA1401 // Fields should be private
-        public static string UId = string.Empty;
-#pragma warning restore SA1401 // Fields should be private
+        private static string userId = string.Empty;
 
         /// <summary>
         /// user name.
         /// </summary>
-#pragma warning disable SA1401 // Fields should be private
-        public static string UName = string.Empty;
-#pragma warning restore SA1401 // Fields should be private
+        private static string userName = string.Empty;
+
+        /// <summary>
+        /// Gets or sets user name.
+        /// </summary>
+        public static string UName { get => userName; set => userName = value; }
+
+        /// <summary>
+        /// Gets or sets user id.
+        /// </summary>
+        public static string UId { get => userId; set => userId = value; }
     }
 }

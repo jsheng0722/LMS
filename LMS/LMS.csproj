@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="packages\NUnit.3.13.1\build\NUnit.props" Condition="Exists('packages\NUnit.3.13.1\build\NUnit.props')" />
+  <Import Project="packages\NUnit.3.13.3\build\NUnit.props" Condition="Exists('packages\NUnit.3.13.3\build\NUnit.props')" />
   <Import Project="packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props" Condition="Exists('packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" />
   <Import Project="packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.props" Condition="Exists('packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.props')" />
   <Import Project="packages\Microsoft.CodeCoverage.17.2.0\build\netstandard1.0\Microsoft.CodeCoverage.props" Condition="Exists('packages\Microsoft.CodeCoverage.17.2.0\build\netstandard1.0\Microsoft.CodeCoverage.props')" />
@@ -42,9 +42,8 @@
     <Reference Include="Microsoft.VisualStudio.CodeCoverage.Shim, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.CodeCoverage.17.2.0\lib\net45\Microsoft.VisualStudio.CodeCoverage.Shim.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=3.13.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>packages\NUnit.3.13.1\lib\net45\nunit.framework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nunit.framework, Version=3.13.3.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>packages\NUnit.3.13.3\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="StyleCop, Version=6.2.0.0, Culture=neutral, PublicKeyToken=f904653c63bc2738, processorArchitecture=MSIL">
       <HintPath>packages\StyleCop.6.2.0\lib\net40\StyleCop.dll</HintPath>
@@ -68,6 +67,24 @@
     <Compile Include="Admin1.Designer.cs">
       <DependentUpon>Admin1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin2.Designer.cs">
+      <DependentUpon>Admin2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin2_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin2_1.Designer.cs">
+      <DependentUpon>Admin2_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin2_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin2_2.Designer.cs">
+      <DependentUpon>Admin2_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dao.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="Login.cs">
@@ -84,6 +101,30 @@
     <Compile Include="User1.Designer.cs">
       <DependentUpon>User1.cs</DependentUpon>
     </Compile>
+    <Compile Include="User2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User2.Designer.cs">
+      <DependentUpon>User2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User3.Designer.cs">
+      <DependentUpon>User3.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin1.resx">
+      <DependentUpon>Admin1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin2.resx">
+      <DependentUpon>Admin2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin2_1.resx">
+      <DependentUpon>Admin2_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin2_2.resx">
+      <DependentUpon>Admin2_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +137,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User1.resx">
+      <DependentUpon>User1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User2.resx">
+      <DependentUpon>User2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User3.resx">
+      <DependentUpon>User3.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -127,7 +177,7 @@
     <Error Condition="!Exists('packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.props'))" />
     <Error Condition="!Exists('packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.targets'))" />
     <Error Condition="!Exists('packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit3TestAdapter.4.2.1\build\net35\NUnit3TestAdapter.props'))" />
-    <Error Condition="!Exists('packages\NUnit.3.13.1\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit.3.13.1\build\NUnit.props'))" />
+    <Error Condition="!Exists('packages\NUnit.3.13.3\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NUnit.3.13.3\build\NUnit.props'))" />
   </Target>
   <Import Project="packages\Microsoft.CodeCoverage.17.2.0\build\netstandard1.0\Microsoft.CodeCoverage.targets" Condition="Exists('packages\Microsoft.CodeCoverage.17.2.0\build\netstandard1.0\Microsoft.CodeCoverage.targets')" />
   <Import Project="packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.targets" Condition="Exists('packages\Microsoft.NET.Test.Sdk.17.2.0\build\net45\Microsoft.NET.Test.Sdk.targets')" />

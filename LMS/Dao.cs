@@ -10,13 +10,15 @@ namespace LMS
     /// </summary>
     public class Dao
     {
-        // sql connection.
+        /// <summary>
+        /// database connection.
+        /// </summary>
         private SqlConnection sc;
 
         /// <summary>
-        /// connect to sql.
+        /// connect to database.
         /// </summary>
-        /// <returns> sql sc.</returns>
+        /// <returns>the database.</returns>
         public SqlConnection Connect()
         {
             string str = @"Data Source=LAPTOP-O9OBELQO; Initial Catalog=BookDB;Integrated Security=True";
@@ -28,8 +30,8 @@ namespace LMS
         /// <summary>
         /// Command function.
         /// </summary>
-        /// <param name="sql">sql.</param>
-        /// <returns>command.</returns>
+        /// <param name="sql">the database.</param>
+        /// <returns>the command.</returns>
         public SqlCommand Command(string sql)
         {
             SqlCommand cmd = new SqlCommand(sql, this.Connect());
@@ -37,9 +39,9 @@ namespace LMS
         }
 
         /// <summary>
-        /// excute the command.
+        /// execute the command.
         /// </summary>
-        /// <param name="sql">sql.</param>
+        /// <param name="sql">the database.</param>
         /// <returns>command execute.</returns>
         public int Execute(string sql)
         {
@@ -47,9 +49,9 @@ namespace LMS
         }
 
         /// <summary>
-        /// read from sql.
+        /// read from database.
         /// </summary>
-        /// <param name="sql">sql for read.</param>
+        /// <param name="sql">database for read.</param>
         /// <returns>command read.</returns>
         public SqlDataReader Read(string sql)
         {
@@ -61,7 +63,7 @@ namespace LMS
         /// </summary>
         public void Daoclose()
         {
-            sc.Close();
+            this.sc.Close();
         }
     }
 }

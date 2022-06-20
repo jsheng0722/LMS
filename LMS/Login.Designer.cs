@@ -1,8 +1,63 @@
-﻿
+﻿// <copyright file="Login.Designer.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 namespace LMS
 {
-    partial class Login
+    /// <summary>
+    /// login window components.
+    /// </summary>
+    public partial class Login
     {
+        /// <summary>
+        /// label1 component for creator.
+        /// </summary>
+        private System.Windows.Forms.Label label1;
+
+        /// <summary>
+        /// label2 component for title.
+        /// </summary>
+        private System.Windows.Forms.Label label2;
+
+        /// <summary>
+        /// label3 component for account.
+        /// </summary>
+        private System.Windows.Forms.Label label3;
+
+        /// <summary>
+        /// label4 component for password.
+        /// </summary>
+        private System.Windows.Forms.Label label4;
+
+        /// <summary>
+        /// textBox1 component for account enter.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBox1;
+
+        /// <summary>
+        /// textBox2 component for password enter.
+        /// </summary>
+        private System.Windows.Forms.TextBox textBox2;
+
+        /// <summary>
+        /// button1 component for confirm login.
+        /// </summary>
+        private System.Windows.Forms.Button button1;
+
+        /// <summary>
+        /// button2 component for cancel.
+        /// </summary>
+        private System.Windows.Forms.Button button2;
+
+        /// <summary>
+        /// radio button component for user.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonUser;
+
+        /// <summary>
+        /// radio button component for admin.
+        /// </summary>
+        private System.Windows.Forms.RadioButton radioButtonAdmin;
+
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -14,10 +69,11 @@ namespace LMS
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if (disposing && (this.components != null))
             {
-                components.Dispose();
+                this.components.Dispose();
             }
+
             base.Dispose(disposing);
         }
 
@@ -29,7 +85,6 @@ namespace LMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -39,14 +94,8 @@ namespace LMS
             this.button2 = new System.Windows.Forms.Button();
             this.radioButtonUser = new System.Windows.Forms.RadioButton();
             this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 22);
-            this.label1.TabIndex = 0;
             // 
             // label2
             // 
@@ -133,7 +182,15 @@ namespace LMS
             this.radioButtonAdmin.Text = "管理员";
             this.radioButtonAdmin.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(709, 422);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "By ashiu";
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,7 +206,7 @@ namespace LMS
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,17 +214,5 @@ namespace LMS
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.RadioButton radioButtonUser;
-        private System.Windows.Forms.RadioButton radioButtonAdmin;
     }
 }
-

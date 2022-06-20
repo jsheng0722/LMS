@@ -13,15 +13,21 @@ namespace LMS
     using System.Threading.Tasks;
     using System.Windows.Forms;
 
+    /// <summary>
+    /// login window.
+    /// </summary>
     public partial class Login : Form
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Login"/> class.
+        /// </summary>
         public Login()
         {
             this.InitializeComponent();
         }
 
         /// <summary>
-        /// The botton that work for logining the account.
+        /// The button that work to login the account.
         /// </summary>
         /// <param name="sender">the sender.</param>
         /// <param name="e">the event.</param>
@@ -68,17 +74,17 @@ namespace LMS
 
                 dao.Daoclose();
             }
-
-            // admin verify.
             else if (this.radioButtonAdmin.Checked == true)
             {
+                // admin verify.
                 Dao dao = new Dao();
                 string sql = $"select * from t_admin where id ='{this.textBox1.Text}' and password='{this.textBox2.Text}'";
                 IDataReader dc = dao.Read(sql);
                 if (dc.Read())
                 {
                     Data.UId = dc["id"].ToString();
-                    Data.UName = dc["name"].ToString();
+
+                    // Data.UName = dc["name"].ToString();
                     MessageBox.Show("登陆成功!");
                     Admin1 a = new Admin1();
                     this.Hide();
